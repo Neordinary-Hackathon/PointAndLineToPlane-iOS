@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07764933296965A40040DA72 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07764932296965A40040DA72 /* MainTabController.swift */; };
+		0776493529696D660040DA72 /* WriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493429696D660040DA72 /* WriteController.swift */; };
+		0776493729696D810040DA72 /* CommunityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493629696D810040DA72 /* CommunityController.swift */; };
+		0776493929696D920040DA72 /* MyWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493829696D920040DA72 /* MyWorkController.swift */; };
+		0776493B29696DB70040DA72 /* MyPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493A29696DB70040DA72 /* MyPageController.swift */; };
+		0776493F296994290040DA72 /* SelecteImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493E296994290040DA72 /* SelecteImageCell.swift */; };
 		07983D9229693592007B919C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9129693592007B919C /* AppDelegate.swift */; };
 		07983D9429693592007B919C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9329693592007B919C /* SceneDelegate.swift */; };
 		07983D9629693592007B919C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9529693592007B919C /* ViewController.swift */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07764932296965A40040DA72 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		0776493429696D660040DA72 /* WriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteController.swift; sourceTree = "<group>"; };
+		0776493629696D810040DA72 /* CommunityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityController.swift; sourceTree = "<group>"; };
+		0776493829696D920040DA72 /* MyWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkController.swift; sourceTree = "<group>"; };
+		0776493A29696DB70040DA72 /* MyPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageController.swift; sourceTree = "<group>"; };
+		0776493E296994290040DA72 /* SelecteImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteImageCell.swift; sourceTree = "<group>"; };
 		07983D8E29693592007B919C /* PointAndLineToPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointAndLineToPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07983D9129693592007B919C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07983D9329693592007B919C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +109,7 @@
 		07983DA7296935A7007B919C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0776493E296994290040DA72 /* SelecteImageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +134,11 @@
 			isa = PBXGroup;
 			children = (
 				07983D9529693592007B919C /* ViewController.swift */,
+				07764932296965A40040DA72 /* MainTabController.swift */,
+				0776493429696D660040DA72 /* WriteController.swift */,
+				0776493629696D810040DA72 /* CommunityController.swift */,
+				0776493829696D920040DA72 /* MyWorkController.swift */,
+				0776493A29696DB70040DA72 /* MyPageController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -222,8 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0776493B29696DB70040DA72 /* MyPageController.swift in Sources */,
+				0776493929696D920040DA72 /* MyWorkController.swift in Sources */,
+				0776493F296994290040DA72 /* SelecteImageCell.swift in Sources */,
 				07983D9629693592007B919C /* ViewController.swift in Sources */,
+				0776493729696D810040DA72 /* CommunityController.swift in Sources */,
 				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
+				07764933296965A40040DA72 /* MainTabController.swift in Sources */,
+				0776493529696D660040DA72 /* WriteController.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
