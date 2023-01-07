@@ -85,8 +85,14 @@ class PlaneListViewController: UIViewController {
 		configureViews()
     }
 	
+	var vc: UIViewController?
+	var stringArr: [String] = []
+	
 	@objc func didTapNextButton() {
-		self.navigationController?.pushViewController(PlaneWriteViewController(), animated: true)
+		let vc = PlaneWriteViewController()
+		vc.stringArr = self.stringArr
+
+		self.navigationController?.pushViewController(vc, animated: true)
 	}
 	
 	func configureViews() {
@@ -155,7 +161,7 @@ extension PlaneListViewController: UICollectionViewDelegate, UICollectionViewDat
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaneWriteCollectionViewCell.identifier, for: indexPath) as? PlaneWriteCollectionViewCell else {return}
-
+		self.stringArr.append(cell.contentLabel.text!)
 		cell.isSelected = true
 	}
 

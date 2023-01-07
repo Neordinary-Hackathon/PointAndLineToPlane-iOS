@@ -63,6 +63,12 @@ class PlaneWriteViewController: UIViewController {
 		textField.placeholder = "dsfdasdsada"
 		textField.backgroundColor = .black
 		textField.layer.cornerRadius = 8
+		textField.textColor = .white
+		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+		textField.leftViewMode = .always
+		let leftParagraphStyle = NSMutableParagraphStyle()
+		leftParagraphStyle.alignment = .left
+		textField.attributedPlaceholder = NSAttributedString(string: "글을 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "MainCollectionViewBehindColor") ?? .white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), .paragraphStyle: leftParagraphStyle])
 		
 		return textField
 	}()
@@ -76,17 +82,29 @@ class PlaneWriteViewController: UIViewController {
 		button.layer.borderColor = UIColor(named: "BackgroundColor")?.cgColor
 		return button
 	}()
-
+	
+	var stringArr: [String] = []
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		navigationController?.isNavigationBarHidden = true
 		view.backgroundColor = UIColor(named: "MainCollectionViewBackgoundColor")
 		collectionView.delegate = self
 		collectionView.dataSource = self
-		collectionView.register(PlaneWriteCollectionViewCell.self, forCellWithReuseIdentifier: PlaneWriteCollectionViewCell.identifier)
-		
+		collectionView.register(PlaneWriteSelectedCollectionViewCell.self, forCellWithReuseIdentifier: PlaneWriteSelectedCollectionViewCell.identifier)
+		nextButton.addTarget(self, action: #selector(didTapCompletionButton), for: .touchUpInside)
 		configureViews()
+		print(self.stringArr)
+		
     }
+	
+	@objc func didTapCompletionButton() {
+		let popupVC = PlanePopUpViewController()
+		popupVC.stringData = self.textField.text!
+		// 투명도가 있으면 투명도에 맞춰서 나오게 함
+		popupVC.modalPresentationStyle = .overCurrentContext
+		self.present(popupVC, animated: false)
+	}
 	
 	func configureViews() {
 		
@@ -148,11 +166,12 @@ class PlaneWriteViewController: UIViewController {
 
 extension PlaneWriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 3
+		return stringArr.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaneWriteCollectionViewCell.identifier, for: indexPath) as? PlaneWriteCollectionViewCell else {return UICollectionViewCell()}
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaneWriteSelectedCollectionViewCell.identifier, for: indexPath) as? PlaneWriteSelectedCollectionViewCell else {return UICollectionViewCell()}
+		cell.contentLabel.text = self.stringArr[indexPath.row]
 		
 		// TODO: cell label text 설정
 		
@@ -163,9 +182,7 @@ extension PlaneWriteViewController: UICollectionViewDelegate, UICollectionViewDa
 		return CGSize(width: collectionView.frame.size.width, height: 42)
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaneWriteCollectionViewCell.identifier, for: indexPath) as? PlaneWriteCollectionViewCell else {return}
-
-		cell.isSelected = true
-	}
+	
+	
+	
 }
