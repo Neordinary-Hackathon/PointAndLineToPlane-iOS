@@ -20,7 +20,7 @@ class PlanePopUpViewController: UIViewController {
 	
 	lazy var titleLabel: UILabel = {
 		let label = UILabel()
-		label.text = "점 작성을 완료할까요?"
+		label.text = "면 작성을 완료할까요?"
 		label.textColor = .black
 		label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
 		
@@ -63,6 +63,7 @@ class PlanePopUpViewController: UIViewController {
 	}()
 	
 	var stringData: String = ""
+	var lineID: [Int] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -80,8 +81,8 @@ class PlanePopUpViewController: UIViewController {
 	
 	@objc func didTapConfirmButton() {
 		// TODO: 점 작성 완료 -> 선 VC로 이동 or 메인 VC로 이동
-		print(stringData)
-//		DotRequest()
+//		print(stringData)
+		planeRequest()
 		self.navigationController?.popToRootViewController(animated: true)
 	}
 	
@@ -90,10 +91,29 @@ class PlanePopUpViewController: UIViewController {
 		let header: HTTPHeaders = [
 			.authorization(bearerToken: APIToken.shared.tokenValue)
 		]
-		
-		AF.request(url, method: .get, headers: header)
+
+		let bodyData: Parameters = [
+			"line_id": self.lineID.map {String($0)}.joined(separator: " "),
+			"flat_content": self.stringData
+		]
+
+		AF.request(url, method: .post, parameters: bodyData,encoding: JSONEncoding.default ,headers: header)
 			.validate(statusCode: 200..<300)
-			
+			.responseData { response in
+				switch response.result {
+				case .success(let res):
+					let decoder = JSONDecoder()
+
+					do {
+						let data = try decoder.decode(DotRequestModel.self, from: res)
+						print(data)
+					} catch {
+						print("errorr in decode")
+					}
+				case .failure(let err):
+					print(err.localizedDescription)
+				}
+			}
 	}
 	
 	

@@ -8,6 +8,10 @@
 import Foundation
 
 struct LineListModel: Decodable {
+	let lines: [Line]
+}
+
+struct Line: Decodable {
 	let line_id: Int
 	let line_content: String
 }

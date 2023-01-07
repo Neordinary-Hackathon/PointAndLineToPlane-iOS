@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 class PlaneListViewController: UIViewController {
 	
@@ -83,16 +84,55 @@ class PlaneListViewController: UIViewController {
 		
 		nextButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
 		configureViews()
+		planeRequest()
     }
 	
 	var vc: UIViewController?
+	var cellData: [String] = []
+	var lineID: [Int] = []
 	var stringArr: [String] = []
 	
 	@objc func didTapNextButton() {
 		let vc = PlaneWriteViewController()
 		vc.stringArr = self.stringArr
-
+		vc.lineID = self.lineID
 		self.navigationController?.pushViewController(vc, animated: true)
+	}
+	
+	private func planeRequest() {
+		let url = "http://3.39.221.35:8080/flat"
+		let header: HTTPHeaders = [
+			.authorization(bearerToken: APIToken.shared.tokenValue)
+		]
+		
+		AF.request(url, method: .get, headers: header)
+			.validate(statusCode: 200..<300)
+			.responseData { response in
+				switch response.result {
+				case .success(let res):
+					let decoder = JSONDecoder()
+					
+					do {
+						let data = try decoder.decode(LineListModel.self, from: res)
+						self.cellData.append(data.lines[0].line_content)
+						self.cellData.append(data.lines[1].line_content)
+						self.cellData.append(data.lines[2].line_content)
+						self.lineID.append(data.lines[0].line_id)
+						self.lineID.append(data.lines[1].line_id)
+						self.lineID.append(data.lines[2].line_id)
+						
+						self.collectionView.reloadData()
+//						self.stringArr.append(data.lines[0].line_content)
+//						self.stringArr.append(data.lines[1].line_content)
+//						self.stringArr.append(data.lines[2].line_content)
+//						print(data.lines[0].line_content)
+					} catch {
+						print("errorr in decode")
+					}
+				case .failure(let err):
+					print(err.localizedDescription)
+				}
+			}
 	}
 	
 	func configureViews() {
@@ -144,12 +184,12 @@ class PlaneListViewController: UIViewController {
 
 extension PlaneListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 3
+		return cellData.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaneWriteCollectionViewCell.identifier, for: indexPath) as? PlaneWriteCollectionViewCell else {return UICollectionViewCell()}
-		
+		cell.contentLabel.text = cellData[indexPath.row]
 		// TODO: cell label text 설정
 		
 		return cell
@@ -161,7 +201,7 @@ extension PlaneListViewController: UICollectionViewDelegate, UICollectionViewDat
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlaneWriteCollectionViewCell.identifier, for: indexPath) as? PlaneWriteCollectionViewCell else {return}
-		self.stringArr.append(cell.contentLabel.text!)
+		self.stringArr.append(cellData[indexPath.row])
 		cell.isSelected = true
 	}
 
