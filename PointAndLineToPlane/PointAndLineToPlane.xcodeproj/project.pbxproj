@@ -7,18 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07764933296965A40040DA72 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07764932296965A40040DA72 /* MainTabController.swift */; };
+		0776493529696D660040DA72 /* WriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493429696D660040DA72 /* WriteController.swift */; };
+		0776493729696D810040DA72 /* CommunityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493629696D810040DA72 /* CommunityController.swift */; };
+		0776493929696D920040DA72 /* MyWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493829696D920040DA72 /* MyWorkController.swift */; };
+		0776493B29696DB70040DA72 /* MyPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493A29696DB70040DA72 /* MyPageController.swift */; };
+		0776493F296994290040DA72 /* SelecteImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493E296994290040DA72 /* SelecteImageCell.swift */; };
 		07983D9229693592007B919C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9129693592007B919C /* AppDelegate.swift */; };
 		07983D9429693592007B919C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9329693592007B919C /* SceneDelegate.swift */; };
-		07983D9629693592007B919C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9529693592007B919C /* ViewController.swift */; };
+		07983D9629693592007B919C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9529693592007B919C /* LoginViewController.swift */; };
 		07983D9929693592007B919C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9729693592007B919C /* Main.storyboard */; };
 		07983D9B29693593007B919C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9A29693593007B919C /* Assets.xcassets */; };
 		07983D9E29693593007B919C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9C29693593007B919C /* LaunchScreen.storyboard */; };
 		07983DB2296937B7007B919C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB1296937B7007B919C /* SnapKit */; };
 		07983DB5296937D1007B919C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB4296937D1007B919C /* Alamofire */; };
 		079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */ = {isa = PBXBuildFile; fileRef = 079ED70929694FC7008A7F19 /* Pretendard-1 */; };
+
+		AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */; };
+		AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */; };
+		AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EF2969C64900723C96 /* PopupViewController.swift */; };
+		AE1CB2F32969E4A100723C96 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F22969E4A100723C96 /* KakaoSDK */; };
+		AE1CB2F52969E4A100723C96 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */; };
+		AE1CB301296A009000723C96 /* WordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB300296A009000723C96 /* WordListModel.swift */; };
+		AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370A2969935000D228F6 /* LineViewController.swift */; };
+		AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370C29699A4800D228F6 /* LineCell.swift */; };
+
 		2C6CE63E296966A800E88E35 /* PointWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */; };
 		2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */; };
 		2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */; };
+
 		2C6CE64F2969C2B900E88E35 /* PlaneListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE64E2969C2B900E88E35 /* PlaneListViewController.swift */; };
 		2C6CE6522969C7FE00E88E35 /* PlaneWriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE6512969C7FE00E88E35 /* PlaneWriteCollectionViewCell.swift */; };
 		2C6CE6542969F63B00E88E35 /* PlaneWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE6532969F63B00E88E35 /* PlaneWriteViewController.swift */; };
@@ -26,21 +43,39 @@
 		2C6CE6582969FCFD00E88E35 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE6572969FCFD00E88E35 /* APIToken.swift */; };
 		2C6CE65A296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */; };
 		2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE65B296A0DEA00E88E35 /* PlanePopUpViewController.swift */; };
+
+
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07764932296965A40040DA72 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		0776493429696D660040DA72 /* WriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteController.swift; sourceTree = "<group>"; };
+		0776493629696D810040DA72 /* CommunityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityController.swift; sourceTree = "<group>"; };
+		0776493829696D920040DA72 /* MyWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkController.swift; sourceTree = "<group>"; };
+		0776493A29696DB70040DA72 /* MyPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageController.swift; sourceTree = "<group>"; };
+		0776493E296994290040DA72 /* SelecteImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteImageCell.swift; sourceTree = "<group>"; };
 		07983D8E29693592007B919C /* PointAndLineToPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointAndLineToPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07983D9129693592007B919C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07983D9329693592007B919C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07983D9529693592007B919C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07983D9529693592007B919C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07983D9829693592007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07983D9A29693593007B919C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07983D9D29693593007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07983D9F29693593007B919C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079ED70929694FC7008A7F19 /* Pretendard-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pretendard-1"; sourceTree = "<group>"; };
+
+		AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailViewController.swift; sourceTree = "<group>"; };
+		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineDetailCell.swift; path = ../../LineDetailCell.swift; sourceTree = "<group>"; };
+		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		AE1CB300296A009000723C96 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
+		AEFA370A2969935000D228F6 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
+		AEFA370C29699A4800D228F6 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
+
 		2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointWriteViewController.swift; sourceTree = "<group>"; };
 		2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointWriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointPopUpViewController.swift; sourceTree = "<group>"; };
+
 		2C6CE64E2969C2B900E88E35 /* PlaneListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneListViewController.swift; sourceTree = "<group>"; };
 		2C6CE6512969C7FE00E88E35 /* PlaneWriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneWriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C6CE6532969F63B00E88E35 /* PlaneWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneWriteViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +83,7 @@
 		2C6CE6572969FCFD00E88E35 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneWriteSelectedCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C6CE65B296A0DEA00E88E35 /* PlanePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanePopUpViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +93,8 @@
 			files = (
 				07983DB2296937B7007B919C /* SnapKit in Frameworks */,
 				07983DB5296937D1007B919C /* Alamofire in Frameworks */,
+				AE1CB2F32969E4A100723C96 /* KakaoSDK in Frameworks */,
+				AE1CB2F52969E4A100723C96 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +139,11 @@
 		07983DA5296935A0007B919C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+
 				2C6CE6552969FBD800E88E35 /* DotRequestModel.swift */,
+
+				AE1CB300296A009000723C96 /* WordListModel.swift */,
+
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,7 +158,13 @@
 		07983DA7296935A7007B919C /* View */ = {
 			isa = PBXGroup;
 			children = (
+
+				AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */,
+				AEFA370C29699A4800D228F6 /* LineCell.swift */,
+
+				0776493E296994290040DA72 /* SelecteImageCell.swift */,
 				2C6CE63F296972F800E88E35 /* Write */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,8 +189,20 @@
 		07983DAA29693691007B919C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+
+				AE1CB2EF2969C64900723C96 /* PopupViewController.swift */,
+				07983D9529693592007B919C /* LoginViewController.swift */,
+				AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */,
+				AEFA370A2969935000D228F6 /* LineViewController.swift */,
+
 				2C6CE63B2969641200E88E35 /* Write */,
 				07983D9529693592007B919C /* ViewController.swift */,
+				07764932296965A40040DA72 /* MainTabController.swift */,
+				0776493429696D660040DA72 /* WriteController.swift */,
+				0776493629696D810040DA72 /* CommunityController.swift */,
+				0776493829696D920040DA72 /* MyWorkController.swift */,
+				0776493A29696DB70040DA72 /* MyPageController.swift */,
+
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -235,6 +295,8 @@
 			packageProductDependencies = (
 				07983DB1296937B7007B919C /* SnapKit */,
 				07983DB4296937D1007B919C /* Alamofire */,
+				AE1CB2F22969E4A100723C96 /* KakaoSDK */,
+				AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */,
 			);
 			productName = PointAndLineToPlane;
 			productReference = 07983D8E29693592007B919C /* PointAndLineToPlane.app */;
@@ -267,6 +329,7 @@
 			packageReferences = (
 				07983DB0296937B7007B919C /* XCRemoteSwiftPackageReference "SnapKit" */,
 				07983DB3296937D1007B919C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = 07983D8F29693592007B919C /* Products */;
 			projectDirPath = "";
@@ -296,8 +359,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				2C6CE6542969F63B00E88E35 /* PlaneWriteViewController.swift in Sources */,
+
+
+				07983D9629693592007B919C /* LoginViewController.swift in Sources */,
+				AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */,
+				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
+				AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */,
+
+				0776493B29696DB70040DA72 /* MyPageController.swift in Sources */,
+				0776493929696D920040DA72 /* MyWorkController.swift in Sources */,
+				0776493F296994290040DA72 /* SelecteImageCell.swift in Sources */,
+
 				07983D9629693592007B919C /* ViewController.swift in Sources */,
+				0776493729696D810040DA72 /* CommunityController.swift in Sources */,
+
 				2C6CE63E296966A800E88E35 /* PointWriteViewController.swift in Sources */,
 				2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */,
 				2C6CE65A296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift in Sources */,
@@ -305,10 +382,21 @@
 				2C6CE6562969FBD800E88E35 /* DotRequestModel.swift in Sources */,
 				2C6CE64F2969C2B900E88E35 /* PlaneListViewController.swift in Sources */,
 				2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */,
-				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
+
+        07983D9229693592007B919C /* AppDelegate.swift in Sources */,
+				07764933296965A40040DA72 /* MainTabController.swift in Sources */,
+				0776493529696D660040DA72 /* WriteController.swift in Sources */,
+
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
+
 				2C6CE6582969FCFD00E88E35 /* APIToken.swift in Sources */,
 				2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */,
+
+				AE1CB301296A009000723C96 /* WordListModel.swift in Sources */,
+				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
+				AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */,
+				AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +546,8 @@
 				DEVELOPMENT_TEAM = 2V279GTPCN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PointAndLineToPlane/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -485,6 +575,8 @@
 				DEVELOPMENT_TEAM = 2V279GTPCN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PointAndLineToPlane/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -542,6 +634,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -554,6 +654,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 07983DB3296937D1007B919C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		AE1CB2F22969E4A100723C96 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
