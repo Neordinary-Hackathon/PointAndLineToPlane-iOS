@@ -15,7 +15,8 @@
 		07983D9E29693593007B919C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9C29693593007B919C /* LaunchScreen.storyboard */; };
 		07983DB2296937B7007B919C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB1296937B7007B919C /* SnapKit */; };
 		07983DB5296937D1007B919C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB4296937D1007B919C /* Alamofire */; };
-		2C14638C29693D1F00996E29 /* NaverLoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14638B29693D1F00996E29 /* NaverLoginAPI.swift */; };
+		079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */ = {isa = PBXBuildFile; fileRef = 079ED70929694FC7008A7F19 /* Pretendard-1 */; };
+		079ED711296956F3008A7F19 /* Fauna_One in Resources */ = {isa = PBXBuildFile; fileRef = 079ED710296956F3008A7F19 /* Fauna_One */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		07983D9A29693593007B919C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07983D9D29693593007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07983D9F29693593007B919C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C14638B29693D1F00996E29 /* NaverLoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginAPI.swift; sourceTree = "<group>"; };
+		079ED70929694FC7008A7F19 /* Pretendard-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pretendard-1"; sourceTree = "<group>"; };
+		079ED710296956F3008A7F19 /* Fauna_One */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fauna_One; path = ../../../../../Fauna_One; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				07983D9A29693593007B919C /* Assets.xcassets */,
 				07983D9C29693593007B919C /* LaunchScreen.storyboard */,
 				07983D9F29693593007B919C /* Info.plist */,
+				079ED70429694E41008A7F19 /* Font */,
 			);
 			path = PointAndLineToPlane;
 			sourceTree = "<group>";
@@ -125,9 +128,17 @@
 		079ED70329693B29008A7F19 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2C14638B29693D1F00996E29 /* NaverLoginAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		079ED70429694E41008A7F19 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				079ED710296956F3008A7F19 /* Fauna_One */,
+				079ED70929694FC7008A7F19 /* Pretendard-1 */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +207,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */,
 				07983D9E29693593007B919C /* LaunchScreen.storyboard in Resources */,
 				07983D9B29693593007B919C /* Assets.xcassets in Resources */,
+				079ED711296956F3008A7F19 /* Fauna_One in Resources */,
 				07983D9929693592007B919C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07983D9629693592007B919C /* ViewController.swift in Sources */,
-				2C14638C29693D1F00996E29 /* NaverLoginAPI.swift in Sources */,
 				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
 			);
