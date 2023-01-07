@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07764933296965A40040DA72 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07764932296965A40040DA72 /* MainTabController.swift */; };
+		0776493529696D660040DA72 /* WriteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493429696D660040DA72 /* WriteController.swift */; };
+		0776493729696D810040DA72 /* CommunityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493629696D810040DA72 /* CommunityController.swift */; };
+		0776493929696D920040DA72 /* MyWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493829696D920040DA72 /* MyWorkController.swift */; };
+		0776493B29696DB70040DA72 /* MyPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493A29696DB70040DA72 /* MyPageController.swift */; };
+		0776493F296994290040DA72 /* SelecteImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776493E296994290040DA72 /* SelecteImageCell.swift */; };
 		07983D9229693592007B919C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9129693592007B919C /* AppDelegate.swift */; };
 		07983D9429693592007B919C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9329693592007B919C /* SceneDelegate.swift */; };
 		07983D9629693592007B919C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9529693592007B919C /* LoginViewController.swift */; };
@@ -16,6 +22,7 @@
 		07983DB2296937B7007B919C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB1296937B7007B919C /* SnapKit */; };
 		07983DB5296937D1007B919C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB4296937D1007B919C /* Alamofire */; };
 		079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */ = {isa = PBXBuildFile; fileRef = 079ED70929694FC7008A7F19 /* Pretendard-1 */; };
+
 		AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */; };
 		AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */; };
 		AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EF2969C64900723C96 /* PopupViewController.swift */; };
@@ -24,9 +31,20 @@
 		AE1CB301296A009000723C96 /* WordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB300296A009000723C96 /* WordListModel.swift */; };
 		AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370A2969935000D228F6 /* LineViewController.swift */; };
 		AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370C29699A4800D228F6 /* LineCell.swift */; };
+
+		2C6CE63E296966A800E88E35 /* PointWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */; };
+		2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */; };
+		2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07764932296965A40040DA72 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		0776493429696D660040DA72 /* WriteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteController.swift; sourceTree = "<group>"; };
+		0776493629696D810040DA72 /* CommunityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityController.swift; sourceTree = "<group>"; };
+		0776493829696D920040DA72 /* MyWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkController.swift; sourceTree = "<group>"; };
+		0776493A29696DB70040DA72 /* MyPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageController.swift; sourceTree = "<group>"; };
+		0776493E296994290040DA72 /* SelecteImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteImageCell.swift; sourceTree = "<group>"; };
 		07983D8E29693592007B919C /* PointAndLineToPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointAndLineToPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07983D9129693592007B919C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07983D9329693592007B919C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,12 +54,18 @@
 		07983D9D29693593007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07983D9F29693593007B919C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079ED70929694FC7008A7F19 /* Pretendard-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pretendard-1"; sourceTree = "<group>"; };
+
 		AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailViewController.swift; sourceTree = "<group>"; };
 		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineDetailCell.swift; path = ../../LineDetailCell.swift; sourceTree = "<group>"; };
 		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		AE1CB300296A009000723C96 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
 		AEFA370A2969935000D228F6 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
 		AEFA370C29699A4800D228F6 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
+
+		2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointWriteViewController.swift; sourceTree = "<group>"; };
+		2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointWriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointPopUpViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +136,13 @@
 		07983DA7296935A7007B919C /* View */ = {
 			isa = PBXGroup;
 			children = (
+
 				AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */,
 				AEFA370C29699A4800D228F6 /* LineCell.swift */,
+
+				0776493E296994290040DA72 /* SelecteImageCell.swift */,
+				2C6CE63F296972F800E88E35 /* Write */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,10 +166,20 @@
 		07983DAA29693691007B919C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+
 				AE1CB2EF2969C64900723C96 /* PopupViewController.swift */,
 				07983D9529693592007B919C /* LoginViewController.swift */,
 				AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */,
 				AEFA370A2969935000D228F6 /* LineViewController.swift */,
+
+				2C6CE63B2969641200E88E35 /* Write */,
+				07983D9529693592007B919C /* ViewController.swift */,
+				07764932296965A40040DA72 /* MainTabController.swift */,
+				0776493429696D660040DA72 /* WriteController.swift */,
+				0776493629696D810040DA72 /* CommunityController.swift */,
+				0776493829696D920040DA72 /* MyWorkController.swift */,
+				0776493A29696DB70040DA72 /* MyPageController.swift */,
+
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -158,6 +197,39 @@
 				079ED70929694FC7008A7F19 /* Pretendard-1 */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		2C6CE63B2969641200E88E35 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE63C2969641900E88E35 /* Point */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		2C6CE63C2969641900E88E35 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */,
+				2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		2C6CE63F296972F800E88E35 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE640296972FE00E88E35 /* Point */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		2C6CE640296972FE00E88E35 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */,
+			);
+			path = Point;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +315,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				07983D9629693592007B919C /* LoginViewController.swift in Sources */,
 				AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */,
 				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
 				AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */,
+
+				0776493B29696DB70040DA72 /* MyPageController.swift in Sources */,
+				0776493929696D920040DA72 /* MyWorkController.swift in Sources */,
+				0776493F296994290040DA72 /* SelecteImageCell.swift in Sources */,
+				07983D9629693592007B919C /* ViewController.swift in Sources */,
+				0776493729696D810040DA72 /* CommunityController.swift in Sources */,
+
+				2C6CE63E296966A800E88E35 /* PointWriteViewController.swift in Sources */,
+				2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */,
+				2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */,
+
+        07983D9229693592007B919C /* AppDelegate.swift in Sources */,
+				07764933296965A40040DA72 /* MainTabController.swift in Sources */,
+				0776493529696D660040DA72 /* WriteController.swift in Sources */,
+
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
 				AE1CB301296A009000723C96 /* WordListModel.swift in Sources */,
 				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
