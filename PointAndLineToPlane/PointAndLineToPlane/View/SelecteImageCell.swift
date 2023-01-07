@@ -59,6 +59,8 @@ class SelecteImageCell: UICollectionViewCell {
     
     //MARK: - Helper
     func setup() {
+        contentView.layer.cornerRadius = 10
+            contentView.layer.masksToBounds = true
         contentView.backgroundColor = .black
         [titleLabel, descriptionLabel, crossImageView, pictureImageView]
             .forEach {contentView.addSubview($0)}

@@ -76,6 +76,8 @@ class MainTabController: UITabBarController {
     
     
     func configureLabel() {
+        tabBar.layer.cornerRadius = tabBar.frame.height * 0.28
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 //        [myLabel1, myLabel2, myImageView, myImageView1]
 //            .forEach {view.addSubview($0)}
 //        
