@@ -1,14 +1,14 @@
 //
-//  PointPopUpViewController.swift
+//  PlanePopUpViewController.swift
 //  PointAndLineToPlane
 //
-//  Created by 정현우 on 2023/01/07.
+//  Created by 정현우 on 2023/01/08.
 //
 
 import UIKit
 import Alamofire
 
-class PointPopUpViewController: UIViewController {
+class PlanePopUpViewController: UIViewController {
 	
 	lazy var popUpView: UIView = {
 		let view = UIView()
@@ -62,56 +62,33 @@ class PointPopUpViewController: UIViewController {
 		return stackView
 	}()
 	
-	var wordList: [String] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	var stringData: String = ""
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		view.backgroundColor = .black.withAlphaComponent(0.6)
 		configureViews()
 		
 		cancelButton.addTarget(self, action: #selector(didTapCancelButton), for: .touchUpInside)
 		confirmButton.addTarget(self, action: #selector(didTapConfirmButton), for: .touchUpInside)
-    }
+	}
 	
 	@objc func didTapCancelButton() {
-		wordList.removeAll()
+//		wordList.removeAll()
 		self.dismiss(animated: false)
 	}
 	
 	@objc func didTapConfirmButton() {
 		// TODO: 점 작성 완료 -> 선 VC로 이동 or 메인 VC로 이동
-//		print(wordList)
-		DotRequest()
+		print(stringData)
+//		DotRequest()
 		self.dismiss(animated: false)
 	}
 	
-	private func DotRequest() {
-		let url = "http://3.39.221.35:8080/dot"
-		let header: HTTPHeaders = [
-			.authorization(bearerToken: APIToken.shared.tokenValue)
-		]
-		
-		let bodyData: Parameters = ["dot_content": self.wordList.joined(separator: " ")]
-		
-		AF.request(url, method: .post, parameters: bodyData,encoding: JSONEncoding.default ,headers: header)
-			.validate(statusCode: 200..<300)
-			.responseData { response in
-				switch response.result {
-				case .success(let res):
-					let decoder = JSONDecoder()
-					
-					do {
-						let data = try decoder.decode(DotRequestModel.self, from: res)
-						print(data)
-					} catch {
-						print("errorr in decode")
-					}
-				case .failure(let err):
-					print(err.localizedDescription)
-				}
-			}
-	}
-    
+	
+	
+	
+	
 
 	private func configureViews() {
 		view.addSubview(popUpView)
