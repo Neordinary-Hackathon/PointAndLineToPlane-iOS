@@ -75,15 +75,19 @@ class PointPopUpViewController: UIViewController {
 	
 	@objc func didTapCancelButton() {
 		wordList.removeAll()
-		self.dismiss(animated: false)
+		self.navigationController?.popViewController(animated: false)
 	}
 	
 	@objc func didTapConfirmButton() {
 		// TODO: 점 작성 완료 -> 선 VC로 이동 or 메인 VC로 이동
 //		print(wordList)
 		DotRequest()
-		self.dismiss(animated: false)
+//		self.dismiss(animated: false)
+		
+		self.navigationController?.popToRootViewController(animated: false)
+		
 	}
+	
 	
 	private func DotRequest() {
 		let url = "http://3.39.221.35:8080/dot"

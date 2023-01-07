@@ -82,7 +82,18 @@ class PlanePopUpViewController: UIViewController {
 		// TODO: 점 작성 완료 -> 선 VC로 이동 or 메인 VC로 이동
 		print(stringData)
 //		DotRequest()
-		self.dismiss(animated: false)
+		self.navigationController?.popToRootViewController(animated: true)
+	}
+	
+	private func planeRequest() {
+		let url = "http://3.39.221.35:8080/flat"
+		let header: HTTPHeaders = [
+			.authorization(bearerToken: APIToken.shared.tokenValue)
+		]
+		
+		AF.request(url, method: .get, headers: header)
+			.validate(statusCode: 200..<300)
+			
 	}
 	
 	

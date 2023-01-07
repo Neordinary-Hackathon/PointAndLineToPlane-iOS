@@ -102,8 +102,8 @@ class PlaneWriteViewController: UIViewController {
 		let popupVC = PlanePopUpViewController()
 		popupVC.stringData = self.textField.text!
 		// 투명도가 있으면 투명도에 맞춰서 나오게 함
-		popupVC.modalPresentationStyle = .overCurrentContext
-		self.present(popupVC, animated: false)
+//		popupVC.modalPresentationStyle = .overCurrentContext
+		self.navigationController?.pushViewController(popupVC, animated: false)
 	}
 	
 	func configureViews() {
