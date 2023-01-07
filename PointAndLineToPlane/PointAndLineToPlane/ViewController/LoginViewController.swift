@@ -10,9 +10,10 @@ import SnapKit
 import KakaoSDKUser
 import KakaoSDKAuth
 import KakaoSDKCommon
+import Alamofire
 
 class LoginViewController: UIViewController {
-
+  
   lazy var loginLabel: UILabel = {
     let label = UILabel()
     label.text = "점선면"
@@ -46,7 +47,7 @@ class LoginViewController: UIViewController {
   lazy var loginLabel6: UILabel = {
     let label = UILabel()
     label.text = "SNS로 간편가입"
-    label.tintColor = .systemGray3
+    label.tintColor = UIColor(named: "MainCollectionViewBehindColor")
     label.font = UIFont(name: "STIXTwoMath-Regular", size: 12)
     return label
   }()
@@ -66,42 +67,67 @@ class LoginViewController: UIViewController {
   }()
   lazy var flowerImage: UIImageView = {
     let imageView = UIImageView(image: UIImage(named: "loginFlower"))
-    imageView.frame.width.isEqual(to: 100)
+    imageView.frame.width.isEqual(to: 200)
     return imageView
   }()
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor(named: "BackgroundColor")
     configureViews()
-//    getFontName()
-//    kakaoLogo.isUserInteractionEnable(true)
+    //    getFontName()
+    //    kakaoLogo.isUserInteractionEnable(true)
   }
-//  func getFontName() {
-//    for family in UIFont.familyNames {
-//      let sName: String = family as String
-//      print("family: (sName)")
-//      for name in UIFont.fontNames(forFamilyName: sName) {
-//        print("name: (\(name) as String)")
-//      }
-//    }
-//  }
+  //  func getFontName() {
+  //    for family in UIFont.familyNames {
+  //      let sName: String = family as String
+  //      print("family: (sName)")
+  //      for name in UIFont.fontNames(forFamilyName: sName) {
+  //        print("name: (\(name) as String)")
+  //      }
+  //    }
+  //  }
   
   @objc func buttonClicked() {
     print("login ~")
     // 카카오톡 설치 여부 확인
-    if (UserApi.isKakaoTalkLoginAvailable()) {
-        UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("loginWithKakaoTalk() success.")
-
-                //do something
-                _ = oauthToken
-            }
-        }
+    UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+      if let error = error {
+        print(error)
+      }
+      else {
+        print("loginWithKakaoAccount() success.")
+        //        UserDefaults.standard.set(oauthToken, forKey: "accessToken") 얜 넘겨주는거
+        print("token >>>>>>> \(oauthToken?.accessToken)")
+        self.get(accessToken: oauthToken?.accessToken ?? "")
+        self.dismiss(animated: true)
+      }
     }
+  }
+  func get(accessToken: String) {
+    AF.request("http://3.39.221.35:8080/auth",
+               method: .post,
+               parameters: nil,
+               encoding: URLEncoding.default,
+               headers: ["ACCESS_TOKEN":"\(accessToken)"])
+    .validate()
+    .responseDecodable(of: KakaoLogin.self,  completionHandler: { response in
+      switch response.result {
+      case .success(let response):
+        AF.request("http://3.39.221.35:8080/register",
+                   method: .post,
+                   parameters: nil,
+                   encoding: URLEncoding.default,
+                   headers: ["ACCESS_TOKEN":"\(response.accessToken)"])
+        .responseJSON { (json) in
+          print("jsonddata \(json)")
+          UserDefaults.standard.set(response.accessToken, forKey: "jwtToken")
+          let vc = LineViewController()
+          (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc, animated: false)
+        }
+      default:
+        break
+      }
+    })
   }
   
   func configureViews() {
@@ -110,11 +136,11 @@ class LoginViewController: UIViewController {
       }
     loginLabel.snp.makeConstraints {
       $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(160)
-      $0.centerX.equalToSuperview()
+      $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(160)
     }
     loginLabel2.snp.makeConstraints {
       $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(160)
-      $0.left.equalTo(loginLabel.snp.right).offset(2)
+      $0.left.equalTo(loginLabel.snp.right)
     }
     loginLabel3.snp.makeConstraints {
       $0.top.equalTo(loginLabel.snp.bottom).offset(10)
@@ -130,6 +156,8 @@ class LoginViewController: UIViewController {
     }
     loginImage.snp.makeConstraints {
       $0.top.equalTo(loginLabel5.snp.bottom).offset(38)
+      $0.height.equalTo(10)
+      $0.width.equalTo(10)
       $0.centerX.equalToSuperview()
     }
     kakaoLogo.snp.makeConstraints {
@@ -149,7 +177,9 @@ class LoginViewController: UIViewController {
       $0.centerX.equalToSuperview()
     }
     flowerImage.snp.makeConstraints {
-      $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-50)
+      $0.bottom.equalTo(view.snp.bottom)
+      $0.height.equalTo(250)
+      $0.width.equalTo(250)
       $0.centerX.equalToSuperview()
     }
   }

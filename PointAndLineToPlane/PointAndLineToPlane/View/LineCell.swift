@@ -19,6 +19,7 @@ class LineCell: UICollectionViewCell {
   override init(frame: CGRect) {
     super.init(frame: frame)
     cellSetting()
+    contentView.layer.zPosition = -1
   }
   
   
@@ -29,10 +30,12 @@ class LineCell: UICollectionViewCell {
   func setSelected(_ selected : Bool, animated:Bool){
     
     if selected{
-      self.contentView.backgroundColor = .blue
+      self.contentView.backgroundColor = UIColor(named: "BackgroundColor")
+      self.label.textColor = .black
     }
     else{
       self.contentView.backgroundColor = .white
+      self.label.textColor = .black
     }
   }
   
@@ -49,7 +52,7 @@ class LineCell: UICollectionViewCell {
 //      self.backgroundColor = .black
 //      self.label.textColor = UIColor(named: "MainCollectionViewBehindColor")
 //    }
-    self.layer.cornerRadius = 15
+    contentView.layer.cornerRadius = 15
     
     label.snp.makeConstraints {
       $0.center.equalToSuperview()

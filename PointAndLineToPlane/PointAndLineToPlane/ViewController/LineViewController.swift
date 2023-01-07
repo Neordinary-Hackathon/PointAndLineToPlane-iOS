@@ -11,6 +11,7 @@ import Alamofire
 class LineViewController: UIViewController {
   
   var selectedIdx = Array<Int>()
+  var selectedTx = Array<String>()
   var model: [WordListModel.Dots]?
   
   lazy var loginImage: UIImageView = {
@@ -91,6 +92,7 @@ class LineViewController: UIViewController {
   @objc func didTapView(_ sender: UITapGestureRecognizer) {
     let vc = LineDetailViewController()
     vc.selectedIds = selectedIdx
+    vc.selectedWord = selectedTx
 //    self.navigationController?.pushViewController(vc, animated: true)
     print("dfsdf")
   }
@@ -102,7 +104,6 @@ class LineViewController: UIViewController {
     ])
       .validate()
       .responseDecodable(of: WordListModel.self, completionHandler: { response in
-        print("moooo >>> \(response)")
         self.model = response.value?.dots
         self.collectionView.reloadData()
       })
@@ -166,8 +167,10 @@ extension LineViewController : UICollectionViewDelegate, UICollectionViewDelegat
     if selectedIdx.contains(indexPath.row){
       if let idx = selectedIdx.firstIndex(of: indexPath.row){
         selectedIdx.remove(at: idx)
+        selectedTx.remove(at: idx)
       }
     }else{
+      selectedTx.append(model?[indexPath.row].dotContent ?? "")
       selectedIdx.append(indexPath.row)
     }
     
@@ -185,12 +188,16 @@ extension LineViewController : UICollectionViewDelegate, UICollectionViewDelegat
       return UICollectionViewCell()
     }
     if selectedIdx.contains(indexPath.row){
-      cell.contentView.backgroundColor = UIColor.blue
-    }else{
+      cell.contentView.backgroundColor = UIColor(named: "BackgroundColor")
+      cell.label.textColor = .black
+    } else{
+
       cell.contentView.backgroundColor = UIColor.clear
+      cell.label.textColor = .black
     }
 //    cell.backgroundColor = selectedIdx.contains(indexPath.row) ? UIColor.blue : UIColor.clear {
     cell.isMultipleTouchEnabled = true
+    cell.layer.cornerRadius = 15
     cell.label.text = model?[indexPath.row].dotContent
     cell.layer.borderWidth = 1
     return cell

@@ -10,14 +10,30 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+  
+  func changeRootViewController (_ vc: UIViewController, animated: Bool) {
+      let login = LoginViewController()
+    window?.rootViewController = login // 전환
+  }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = LineViewController()
+      if !hasJwtToken() {
+        // 로그인 안된 상태
+        let login = LineViewController()
+        window?.rootViewController = login
+      } else {
+        // 로그인 된 상태
+        let main = LineViewController()
+        window?.rootViewController = main
+      }
         window?.makeKeyAndVisible()
     }
+  
+  func hasJwtToken() -> Bool {
+      return UserDefaults.standard.object(forKey: "jwtToken") != nil
+  }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
