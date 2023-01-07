@@ -39,6 +39,7 @@
 		AE1CB2F32969E4A100723C96 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F22969E4A100723C96 /* KakaoSDK */; };
 		AE1CB2F52969E4A100723C96 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */; };
 		AE1CB301296A009000723C96 /* WordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB300296A009000723C96 /* WordListModel.swift */; };
+		AE1CB303296A2B0A00723C96 /* KakaoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */; };
 		AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370A2969935000D228F6 /* LineViewController.swift */; };
 		AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370C29699A4800D228F6 /* LineCell.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineDetailCell.swift; path = ../../LineDetailCell.swift; sourceTree = "<group>"; };
 		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		AE1CB300296A009000723C96 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
+		AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLogin.swift; sourceTree = "<group>"; };
 		AEFA370A2969935000D228F6 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
 		AEFA370C29699A4800D228F6 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +133,11 @@
 		07983DA5296935A0007B919C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+
+				AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */,
+
 				2C6CE6552969FBD800E88E35 /* DotRequestModel.swift */,
+
 				AE1CB300296A009000723C96 /* WordListModel.swift */,
 				2C6CE65D296A202A00E88E35 /* LineListModel.swift */,
 			);
@@ -364,8 +370,12 @@
 				07764933296965A40040DA72 /* MainTabController.swift in Sources */,
 				0776493529696D660040DA72 /* WriteController.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
+
+				AE1CB303296A2B0A00723C96 /* KakaoLogin.swift in Sources */,
+
 				2C6CE6582969FCFD00E88E35 /* APIToken.swift in Sources */,
 				2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */,
+
 				AE1CB301296A009000723C96 /* WordListModel.swift in Sources */,
 				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
 				AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */,

@@ -10,7 +10,10 @@ import Alamofire
 
 class LineDetailViewController: UIViewController {
   
-  var selectedIds: [Int] = []
+
+  var selectedIds = Array<Int>()
+  var selectedWord: [String] = []
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -162,7 +165,7 @@ class LineDetailViewController: UIViewController {
 extension LineDetailViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 4
+    return selectedIds.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -170,7 +173,7 @@ extension LineDetailViewController : UICollectionViewDelegate, UICollectionViewD
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LineDetailCell.identifier, for: indexPath) as? LineDetailCell else {
       return UICollectionViewCell()
     }
-    cell.label.text = "dfdf"
+    cell.label.text = selectedWord[indexPath.row]
     //    cell.label.tintColor = .white
     //    cell.backgroundColor = .black
     //    cell.img.image = UIImage(named: "testImage")
