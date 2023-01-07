@@ -16,7 +16,9 @@
 		07983DB2296937B7007B919C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB1296937B7007B919C /* SnapKit */; };
 		07983DB5296937D1007B919C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB4296937D1007B919C /* Alamofire */; };
 		079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */ = {isa = PBXBuildFile; fileRef = 079ED70929694FC7008A7F19 /* Pretendard-1 */; };
-		079ED711296956F3008A7F19 /* Fauna_One in Resources */ = {isa = PBXBuildFile; fileRef = 079ED710296956F3008A7F19 /* Fauna_One */; };
+		2C6CE63E296966A800E88E35 /* PointWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */; };
+		2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */; };
+		2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		07983D9D29693593007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07983D9F29693593007B919C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079ED70929694FC7008A7F19 /* Pretendard-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pretendard-1"; sourceTree = "<group>"; };
-		079ED710296956F3008A7F19 /* Fauna_One */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fauna_One; path = ../../../../../Fauna_One; sourceTree = "<group>"; };
+		2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointWriteViewController.swift; sourceTree = "<group>"; };
+		2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointWriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		07983DA7296935A7007B919C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C6CE63F296972F800E88E35 /* Write */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 		07983DAA29693691007B919C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2C6CE63B2969641200E88E35 /* Write */,
 				07983D9529693592007B919C /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -135,10 +141,42 @@
 		079ED70429694E41008A7F19 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				079ED710296956F3008A7F19 /* Fauna_One */,
 				079ED70929694FC7008A7F19 /* Pretendard-1 */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		2C6CE63B2969641200E88E35 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE63C2969641900E88E35 /* Point */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		2C6CE63C2969641900E88E35 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE63D296966A800E88E35 /* PointWriteViewController.swift */,
+				2C6CE64729699E3200E88E35 /* PointPopUpViewController.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		2C6CE63F296972F800E88E35 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE640296972FE00E88E35 /* Point */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		2C6CE640296972FE00E88E35 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				2C6CE6432969748F00E88E35 /* PointWriteCollectionViewCell.swift */,
+			);
+			path = Point;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +248,6 @@
 				079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */,
 				07983D9E29693593007B919C /* LaunchScreen.storyboard in Resources */,
 				07983D9B29693593007B919C /* Assets.xcassets in Resources */,
-				079ED711296956F3008A7F19 /* Fauna_One in Resources */,
 				07983D9929693592007B919C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07983D9629693592007B919C /* ViewController.swift in Sources */,
+				2C6CE63E296966A800E88E35 /* PointWriteViewController.swift in Sources */,
+				2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */,
+				2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */,
 				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
 			);
