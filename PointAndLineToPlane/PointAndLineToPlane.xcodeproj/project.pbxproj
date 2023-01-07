@@ -9,27 +9,39 @@
 /* Begin PBXBuildFile section */
 		07983D9229693592007B919C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9129693592007B919C /* AppDelegate.swift */; };
 		07983D9429693592007B919C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9329693592007B919C /* SceneDelegate.swift */; };
-		07983D9629693592007B919C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9529693592007B919C /* ViewController.swift */; };
+		07983D9629693592007B919C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07983D9529693592007B919C /* LoginViewController.swift */; };
 		07983D9929693592007B919C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9729693592007B919C /* Main.storyboard */; };
 		07983D9B29693593007B919C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9A29693593007B919C /* Assets.xcassets */; };
 		07983D9E29693593007B919C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07983D9C29693593007B919C /* LaunchScreen.storyboard */; };
 		07983DB2296937B7007B919C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB1296937B7007B919C /* SnapKit */; };
 		07983DB5296937D1007B919C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07983DB4296937D1007B919C /* Alamofire */; };
 		079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */ = {isa = PBXBuildFile; fileRef = 079ED70929694FC7008A7F19 /* Pretendard-1 */; };
-		079ED711296956F3008A7F19 /* Fauna_One in Resources */ = {isa = PBXBuildFile; fileRef = 079ED710296956F3008A7F19 /* Fauna_One */; };
+		AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */; };
+		AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */; };
+		AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EF2969C64900723C96 /* PopupViewController.swift */; };
+		AE1CB2F32969E4A100723C96 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F22969E4A100723C96 /* KakaoSDK */; };
+		AE1CB2F52969E4A100723C96 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */; };
+		AE1CB301296A009000723C96 /* WordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB300296A009000723C96 /* WordListModel.swift */; };
+		AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370A2969935000D228F6 /* LineViewController.swift */; };
+		AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370C29699A4800D228F6 /* LineCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07983D8E29693592007B919C /* PointAndLineToPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointAndLineToPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07983D9129693592007B919C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07983D9329693592007B919C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07983D9529693592007B919C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07983D9529693592007B919C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07983D9829693592007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07983D9A29693593007B919C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07983D9D29693593007B919C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07983D9F29693593007B919C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079ED70929694FC7008A7F19 /* Pretendard-1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pretendard-1"; sourceTree = "<group>"; };
-		079ED710296956F3008A7F19 /* Fauna_One */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fauna_One; path = ../../../../../Fauna_One; sourceTree = "<group>"; };
+		AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailViewController.swift; sourceTree = "<group>"; };
+		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineDetailCell.swift; path = ../../LineDetailCell.swift; sourceTree = "<group>"; };
+		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		AE1CB300296A009000723C96 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
+		AEFA370A2969935000D228F6 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
+		AEFA370C29699A4800D228F6 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,8 @@
 			files = (
 				07983DB2296937B7007B919C /* SnapKit in Frameworks */,
 				07983DB5296937D1007B919C /* Alamofire in Frameworks */,
+				AE1CB2F32969E4A100723C96 /* KakaoSDK in Frameworks */,
+				AE1CB2F52969E4A100723C96 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +97,7 @@
 		07983DA5296935A0007B919C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE1CB300296A009000723C96 /* WordListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +112,8 @@
 		07983DA7296935A7007B919C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */,
+				AEFA370C29699A4800D228F6 /* LineCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,7 +137,10 @@
 		07983DAA29693691007B919C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				07983D9529693592007B919C /* ViewController.swift */,
+				AE1CB2EF2969C64900723C96 /* PopupViewController.swift */,
+				07983D9529693592007B919C /* LoginViewController.swift */,
+				AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */,
+				AEFA370A2969935000D228F6 /* LineViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -135,7 +155,6 @@
 		079ED70429694E41008A7F19 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				079ED710296956F3008A7F19 /* Fauna_One */,
 				079ED70929694FC7008A7F19 /* Pretendard-1 */,
 			);
 			path = Font;
@@ -160,6 +179,8 @@
 			packageProductDependencies = (
 				07983DB1296937B7007B919C /* SnapKit */,
 				07983DB4296937D1007B919C /* Alamofire */,
+				AE1CB2F22969E4A100723C96 /* KakaoSDK */,
+				AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */,
 			);
 			productName = PointAndLineToPlane;
 			productReference = 07983D8E29693592007B919C /* PointAndLineToPlane.app */;
@@ -192,6 +213,7 @@
 			packageReferences = (
 				07983DB0296937B7007B919C /* XCRemoteSwiftPackageReference "SnapKit" */,
 				07983DB3296937D1007B919C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = 07983D8F29693592007B919C /* Products */;
 			projectDirPath = "";
@@ -210,7 +232,6 @@
 				079ED70A29694FC7008A7F19 /* Pretendard-1 in Resources */,
 				07983D9E29693593007B919C /* LaunchScreen.storyboard in Resources */,
 				07983D9B29693593007B919C /* Assets.xcassets in Resources */,
-				079ED711296956F3008A7F19 /* Fauna_One in Resources */,
 				07983D9929693592007B919C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +243,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07983D9629693592007B919C /* ViewController.swift in Sources */,
+				07983D9629693592007B919C /* LoginViewController.swift in Sources */,
+				AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */,
 				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
+				AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
+				AE1CB301296A009000723C96 /* WordListModel.swift in Sources */,
+				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
+				AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */,
+				AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +401,8 @@
 				DEVELOPMENT_TEAM = 2V279GTPCN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PointAndLineToPlane/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -401,6 +430,8 @@
 				DEVELOPMENT_TEAM = 2V279GTPCN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PointAndLineToPlane/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -458,6 +489,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -470,6 +509,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 07983DB3296937D1007B919C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		AE1CB2F22969E4A100723C96 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1CB2F12969E4A100723C96 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
