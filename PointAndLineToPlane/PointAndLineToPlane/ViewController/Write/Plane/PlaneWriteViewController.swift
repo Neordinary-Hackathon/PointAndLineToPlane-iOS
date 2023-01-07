@@ -58,19 +58,35 @@ class PlaneWriteViewController: UIViewController {
 		return collectionView
 	}()
 	
-	lazy var textField: UITextField = {
-		let textField = UITextField()
-		textField.placeholder = "dsfdasdsada"
-		textField.backgroundColor = .black
-		textField.layer.cornerRadius = 8
-		textField.textColor = .white
-		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-		textField.leftViewMode = .always
-		let leftParagraphStyle = NSMutableParagraphStyle()
-		leftParagraphStyle.alignment = .left
-		textField.attributedPlaceholder = NSAttributedString(string: "글을 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "MainCollectionViewBehindColor") ?? .white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), .paragraphStyle: leftParagraphStyle])
-		
-		return textField
+//	lazy var textField: UITextField = {
+//		let textField = UITextField()
+//		textField.placeholder = "dsfdasdsada"
+//		textField.backgroundColor = .black
+//		textField.layer.cornerRadius = 8
+//		textField.textColor = .white
+//		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+//		textField.leftViewMode = .always
+//		let leftParagraphStyle = NSMutableParagraphStyle()
+//		leftParagraphStyle.alignment = .left
+//		textField.attributedPlaceholder = NSAttributedString(string: "글을 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor : UIColor(named: "MainCollectionViewBehindColor") ?? .white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), .paragraphStyle: leftParagraphStyle])
+//
+//		return textField
+//	}()
+	
+	lazy var textView: UITextView = {
+//		let textView = UITextView()
+//		textView.backgroundColor = .black
+//		textView.textColor = .white
+//
+//		return textView
+		let view = UITextView()
+		view.backgroundColor = .black
+		view.textContainerInset = UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0)
+		view.font = .systemFont(ofSize: 12)
+		view.text = "글을 입력해주세요."
+		view.textColor = .lightGray
+
+			return view
 	}()
 	
 	lazy var nextButton: UIButton = {
@@ -83,6 +99,7 @@ class PlaneWriteViewController: UIViewController {
 		return button
 	}()
 	
+	var lineID: [Int] = []
 	var stringArr: [String] = []
 	
     override func viewDidLoad() {
@@ -95,12 +112,14 @@ class PlaneWriteViewController: UIViewController {
 		nextButton.addTarget(self, action: #selector(didTapCompletionButton), for: .touchUpInside)
 		configureViews()
 		print(self.stringArr)
+		textView.delegate = self
 		
     }
 	
 	@objc func didTapCompletionButton() {
 		let popupVC = PlanePopUpViewController()
-		popupVC.stringData = self.textField.text!
+		popupVC.stringData = self.textView.text!
+		popupVC.lineID = self.lineID
 		// 투명도가 있으면 투명도에 맞춰서 나오게 함
 //		popupVC.modalPresentationStyle = .overCurrentContext
 		self.navigationController?.pushViewController(popupVC, animated: false)
@@ -108,7 +127,7 @@ class PlaneWriteViewController: UIViewController {
 	
 	func configureViews() {
 		
-		[titleLabel, backButtonImageView, planeImageView, descriptionLabel, collectionView, textField, nextButton]
+		[titleLabel, backButtonImageView, planeImageView, descriptionLabel, collectionView, textView, nextButton]
 			.forEach {view.addSubview($0)}
 
 		titleLabel.snp.makeConstraints {
@@ -148,7 +167,8 @@ class PlaneWriteViewController: UIViewController {
 			$0.trailing.equalToSuperview().inset(25)
 			$0.height.equalTo(56)
 		}
-		textField.snp.makeConstraints {
+		textView.layer.cornerRadius = 8
+		textView.snp.makeConstraints {
 			$0.top.equalTo(collectionView.snp.bottom).offset(27.5)
 			$0.leading.equalToSuperview().inset(25)
 			$0.trailing.equalToSuperview().inset(25)
@@ -185,4 +205,20 @@ extension PlaneWriteViewController: UICollectionViewDelegate, UICollectionViewDa
 	
 	
 	
+}
+
+extension PlaneWriteViewController: UITextViewDelegate {
+	func textViewDidBeginEditing(_ textView: UITextView) {
+		if textView.text == "글을 입력해주세요." {
+			textView.text = nil
+			textView.textColor = .lightGray
+		}
+	}
+	
+	func textViewDidEndEditing(_ textView: UITextView) {
+		if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+			textView.text = "글을 입력해주세요."
+			textView.textColor = .white
+		}
+	}
 }
