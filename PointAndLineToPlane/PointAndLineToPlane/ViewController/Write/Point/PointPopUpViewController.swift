@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PointPopUpViewController: UIViewController {
 	
@@ -79,8 +80,36 @@ class PointPopUpViewController: UIViewController {
 	
 	@objc func didTapConfirmButton() {
 		// TODO: 점 작성 완료 -> 선 VC로 이동 or 메인 VC로 이동
-		print(wordList)
+//		print(wordList)
+		DotRequest()
 		self.dismiss(animated: false)
+	}
+	
+	private func DotRequest() {
+		let url = "http://3.39.221.35:8080/dot"
+		let header: HTTPHeaders = [
+			.authorization(bearerToken: APIToken.shared.tokenValue)
+		]
+		
+		let bodyData: Parameters = ["dot_content": self.wordList.joined(separator: " ")]
+		
+		AF.request(url, method: .post, parameters: bodyData,encoding: JSONEncoding.default ,headers: header)
+			.validate(statusCode: 200..<300)
+			.responseData { response in
+				switch response.result {
+				case .success(let res):
+					let decoder = JSONDecoder()
+					
+					do {
+						let data = try decoder.decode(DotRequestModel.self, from: res)
+						print(data)
+					} catch {
+						print("errorr in decode")
+					}
+				case .failure(let err):
+					print(err.localizedDescription)
+				}
+			}
 	}
     
 
