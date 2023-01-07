@@ -65,7 +65,7 @@
 				07983DAA29693691007B919C /* ViewController */,
 				07983DA929693610007B919C /* App */,
 				07983DA8296935DE007B919C /* Extensions */,
-				07983DA6296935A4007B919C /* VIewModel */,
+				07983DA6296935A4007B919C /* ViewModel */,
 				07983DA5296935A0007B919C /* Model */,
 				07983D9729693592007B919C /* Main.storyboard */,
 				07983D9A29693593007B919C /* Assets.xcassets */,
@@ -82,11 +82,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		07983DA6296935A4007B919C /* VIewModel */ = {
+		07983DA6296935A4007B919C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = VIewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		07983DA7296935A7007B919C /* View */ = {
