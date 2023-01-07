@@ -15,34 +15,34 @@ class MainTabController: UITabBarController {
 
     let HEIGHT_TAB_BAR:CGFloat = 120
 
-    lazy var myLabel1: UILabel = {
-       let label = UILabel()
-        label.text = "DLF"
-        label.font = UIFont(name: "Kefa-Regular", size: 24)
-        return label
-    }()
-    
-    lazy var myLabel2: UILabel = {
-       let label = UILabel()
-        label.text = "점 선 면"
-        return label
-    }()
-    
-   
-    
-    lazy var myImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "round1")
-        
-        return imageView
-    }()
-    
-    lazy var myImageView1: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "line1")
-        
-        return imageView
-    }()
+//    lazy var myLabel1: UILabel = {
+//       let label = UILabel()
+//        label.text = "DLF"
+//        label.font = UIFont(name: "Kefa-Regular", size: 24)
+//        return label
+//    }()
+//    
+//    lazy var myLabel2: UILabel = {
+//       let label = UILabel()
+//        label.text = "점 선 면"
+//        return label
+//    }()
+//    
+//   
+//    
+//    lazy var myImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "round1")
+//        
+//        return imageView
+//    }()
+//    
+//    lazy var myImageView1: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "line1")
+//        
+//        return imageView
+//    }()
     
     
     //MARK: - Life cycle
@@ -76,31 +76,30 @@ class MainTabController: UITabBarController {
     
     
     func configureLabel() {
-        [myLabel1, myLabel2, myImageView, myImageView1]
-            .forEach {view.addSubview($0)}
-        
-        myLabel1.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(60)
-            $0.leading.equalToSuperview().inset(30)
-        }
-        
-        myLabel2.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(65)
-            $0.leading.equalToSuperview().inset(85)
-        }
-        
-        
-        myImageView.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(250)
-            $0.leading.equalToSuperview().inset(187)
-        }
-        
-        myImageView1.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(100)
-        }
+//        [myLabel1, myLabel2, myImageView, myImageView1]
+//            .forEach {view.addSubview($0)}
+//        
+//        myLabel1.snp.makeConstraints {
+//            $0.top.equalToSuperview().inset(60)
+//            $0.leading.equalToSuperview().inset(30)
+//        }
+//        
+//        myLabel2.snp.makeConstraints {
+//            $0.top.equalToSuperview().inset(65)
+//            $0.leading.equalToSuperview().inset(85)
+//        }
+//        
+//        
+//        myImageView.snp.makeConstraints {
+//            $0.bottom.equalToSuperview().inset(250)
+//            $0.leading.equalToSuperview().inset(187)
+//        }
+//        
+//        myImageView1.snp.makeConstraints {
+//            $0.top.equalToSuperview().inset(100)
+//        }
         
     }
-    
     
     override func viewDidLayoutSubviews() {
                 super.viewDidLayoutSubviews()

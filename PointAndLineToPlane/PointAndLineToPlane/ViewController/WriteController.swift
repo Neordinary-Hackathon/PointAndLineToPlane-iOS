@@ -20,6 +20,35 @@ class WriteController: UIViewController {
     let lineSpacing: CGFloat = 20
     let cellRatio: CGFloat = 0.7
     var isOneStepPaging = true
+	
+	lazy var myLabel1: UILabel = {
+	   let label = UILabel()
+		label.text = "DLF"
+		label.font = UIFont(name: "Kefa-Regular", size: 24)
+		return label
+	}()
+	
+	lazy var myLabel2: UILabel = {
+	   let label = UILabel()
+		label.text = "점 선 면"
+		return label
+	}()
+	
+   
+	
+	lazy var myImageView: UIImageView = {
+		let imageView = UIImageView()
+		imageView.image = UIImage(named: "round1")
+		
+		return imageView
+	}()
+	
+	lazy var myImageView1: UIImageView = {
+		let imageView = UIImageView()
+		imageView.image = UIImage(named: "line1")
+		
+		return imageView
+	}()
     
     lazy var myLabel3: UILabel = {
        let label = UILabel()
@@ -68,6 +97,10 @@ class WriteController: UIViewController {
         configureUI()
         configLabel()
     }
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		tabBarController?.tabBar.isHidden = false
+	}
     
     override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -82,6 +115,29 @@ class WriteController: UIViewController {
             $0.bottom.equalToSuperview().inset(200)
             $0.leading.equalToSuperview().inset(177)
         }
+		
+		[myLabel1, myLabel2, myImageView, myImageView1]
+			.forEach {view.addSubview($0)}
+		
+		myLabel1.snp.makeConstraints {
+			$0.top.equalToSuperview().inset(60)
+			$0.leading.equalToSuperview().inset(30)
+		}
+		
+		myLabel2.snp.makeConstraints {
+			$0.top.equalToSuperview().inset(65)
+			$0.leading.equalToSuperview().inset(85)
+		}
+		
+		
+		myImageView.snp.makeConstraints {
+			$0.bottom.equalToSuperview().inset(250)
+			$0.leading.equalToSuperview().inset(187)
+		}
+		
+		myImageView1.snp.makeConstraints {
+			$0.top.equalToSuperview().inset(100)
+		}
     }
     
     private func configureUI() {
@@ -127,6 +183,22 @@ extension WriteController: UICollectionViewDelegate, UICollectionViewDataSource,
         let cellWidth = collectionView.frame.size.width - (20*2) - (20*2)
         return CGSize(width: cellWidth, height: 388)
     }
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		switch indexPath.row {
+		case 0:
+			let vc = PointWriteViewController()
+			self.navigationController?.pushViewController(vc, animated: true)
+		case 1:
+			let vc = LineViewController()
+			self.navigationController?.pushViewController(vc, animated: true)
+		case 2:
+			let vc = PlaneListViewController()
+			self.navigationController?.pushViewController(vc, animated: true)
+		default:
+			return 
+		}
+	}
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
        {

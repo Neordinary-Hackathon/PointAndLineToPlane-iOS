@@ -76,7 +76,7 @@ class PlaneListViewController: UIViewController {
         super.viewDidLoad()
 		navigationController?.isNavigationBarHidden = true
 		view.backgroundColor = UIColor(named: "MainCollectionViewBackgoundColor")
-		
+		tabBarController?.tabBar.isHidden = true
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		collectionView.register(PlaneWriteCollectionViewCell.self, forCellWithReuseIdentifier: PlaneWriteCollectionViewCell.identifier)

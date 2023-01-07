@@ -73,7 +73,7 @@ class PointWriteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		tabBarController?.tabBar.isHidden = true
 		navigationController?.isNavigationBarHidden = true
 		view.backgroundColor = UIColor(named: "MainCollectionViewBackgoundColor")
 		collectionView.delegate = self
@@ -85,13 +85,16 @@ class PointWriteViewController: UIViewController {
 		completionButton.addTarget(self, action: #selector(didTapCompletionButton), for: .touchUpInside)
     }
 	
+	
+	
 	@objc func didTapCompletionButton() {
 		didTapConfirmButton()
 		let popupVC = PointPopUpViewController()
 		tempList.forEach {popupVC.wordList.append($0)}
 		// 투명도가 있으면 투명도에 맞춰서 나오게 함
+		
 		popupVC.modalPresentationStyle = .overCurrentContext
-		self.present(popupVC, animated: false)
+		self.navigationController?.pushViewController(popupVC, animated: false)
 	}
 	
 	private func didTapConfirmButton() {
