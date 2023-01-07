@@ -10,11 +10,14 @@ import Alamofire
 
 class LineDetailViewController: UIViewController {
   
+
   var selectedIds = Array<Int>()
   var selectedWord: [String] = []
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
+	  print("sselecc \(selectedIds)")
     configureUI()
     view.addSubview(collectionView)
     collectionView.delegate = self
@@ -79,12 +82,11 @@ class LineDetailViewController: UIViewController {
   }()
   
   @objc func didTapCompletionButton() {
-    didTapConfirmButton()
     let popupVC = PopupViewController()
+	  self.navigationController?.pushViewController(popupVC, animated: false)
     //    tempList.forEach {popupVC.wordList.append($0)}
     // 투명도가 있으면 투명도에 맞춰서 나오게 함
-    popupVC.modalPresentationStyle = .overCurrentContext
-    self.present(popupVC, animated: false)
+	  didTapConfirmButton()
   }
   
   func postWord() {

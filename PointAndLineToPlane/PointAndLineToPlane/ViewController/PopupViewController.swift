@@ -19,7 +19,7 @@ class PopupViewController: UIViewController {
   
   lazy var titleLabel: UILabel = {
     let label = UILabel()
-    label.text = "점 작성을 완료할까요?"
+    label.text = "선 작성을 완료할까요?"
     label.textColor = .black
     label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
     
@@ -80,7 +80,8 @@ class PopupViewController: UIViewController {
   @objc func didTapConfirmButton() {
     // TODO: 점 작성 완료 -> 선 VC로 이동 or 메인 VC로 이동
     print(wordList)
-    self.dismiss(animated: false)
+	  //post
+	  self.navigationController?.popToRootViewController(animated: true)
   }
     
 

@@ -74,6 +74,8 @@ class LineViewController: UIViewController {
   }()
   override func viewDidLoad() {
     super.viewDidLoad()
+	  navigationController?.navigationBar.isHidden = true
+	  tabBarController?.tabBar.isHidden = true
     get()
     configureUI()
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
@@ -84,16 +86,17 @@ class LineViewController: UIViewController {
     collectionView.register(LineCell.self, forCellWithReuseIdentifier: LineCell.identifier)
   }
   @objc private func didClicked() {
-    let vc = LineDetailViewController()
-    vc.selectedIds = selectedIdx  
-    self.navigationController?.pushViewController(vc, animated: true)
-    print("dfsdf")
+	  self.navigationController?.popViewController(animated: true)
   }
   @objc func didTapView(_ sender: UITapGestureRecognizer) {
     let vc = LineDetailViewController()
     vc.selectedIds = selectedIdx
+
     vc.selectedWord = selectedTx
 //    self.navigationController?.pushViewController(vc, animated: true)
+
+    self.navigationController?.pushViewController(vc, animated: true)
+
     print("dfsdf")
   }
   

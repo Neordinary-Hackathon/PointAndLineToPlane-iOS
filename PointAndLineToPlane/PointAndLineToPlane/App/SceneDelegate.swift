@@ -19,15 +19,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-      if !hasJwtToken() {
+
+    /*  if !hasJwtToken() {
         // 로그인 안된 상태
         let login = LineViewController()
         window?.rootViewController = login
-      } else {
+      } else { 
         // 로그인 된 상태
         let main = LineViewController()
-        window?.rootViewController = main
-      }
+        window?.rootViewController = main 
+      } */
+
+
+
+
+        window?.rootViewController = MainTabController()
+
+
+
         window?.makeKeyAndVisible()
     }
   
