@@ -40,6 +40,7 @@
 		AE1CB2F52969E4A100723C96 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AE1CB2F42969E4A100723C96 /* KakaoSDKAuth */; };
 		AE1CB301296A009000723C96 /* WordListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB300296A009000723C96 /* WordListModel.swift */; };
 		AE1CB303296A2B0A00723C96 /* KakaoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */; };
+		AE1CB305296A436300723C96 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB304296A436300723C96 /* Window.swift */; };
 		AEFA370B2969935000D228F6 /* LineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370A2969935000D228F6 /* LineViewController.swift */; };
 		AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFA370C29699A4800D228F6 /* LineCell.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		AE1CB300296A009000723C96 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
 		AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLogin.swift; sourceTree = "<group>"; };
+		AE1CB304296A436300723C96 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		AEFA370A2969935000D228F6 /* LineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewController.swift; sourceTree = "<group>"; };
 		AEFA370C29699A4800D228F6 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				07983D9C29693593007B919C /* LaunchScreen.storyboard */,
 				07983D9F29693593007B919C /* Info.plist */,
 				079ED70429694E41008A7F19 /* Font */,
+				AE1CB304296A436300723C96 /* Window.swift */,
 			);
 			path = PointAndLineToPlane;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
 				AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */,
 				AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */,
+				AE1CB305296A436300723C96 /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2V279GTPCN;
+				DEVELOPMENT_TEAM = 3GVULMQ3LL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PointAndLineToPlane/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -555,7 +559,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2V279GTPCN;
+				DEVELOPMENT_TEAM = 3GVULMQ3LL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PointAndLineToPlane/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
