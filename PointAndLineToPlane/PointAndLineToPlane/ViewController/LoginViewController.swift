@@ -98,36 +98,44 @@ class LoginViewController: UIViewController {
         print("loginWithKakaoAccount() success.")
         //        UserDefaults.standard.set(oauthToken, forKey: "accessToken") 얜 넘겨주는거
         print("token >>>>>>> \(oauthToken?.accessToken)")
-        self.get(accessToken: oauthToken?.accessToken ?? "")
-        self.dismiss(animated: true)
+        
+        self.get(accessToken: oauthToken?.accessToken ?? "") { data in
+          let main = LineViewController()
+          self.changeRootViewController(main, .curveEaseIn)
+        }
+//        self.get(accessToken: oauthToken?.accessToken ?? "")
       }
     }
   }
-  func get(accessToken: String) {
-    AF.request("http://3.39.221.35:8080/auth",
+  func get(accessToken: String, completion : @escaping(_ data : String)-> Void  ) {
+    let parameter : Parameters = [:]
+    let header : HTTPHeaders = [
+//      "Content-Type":"application/json",
+//      "Accept":"application/json",
+      .authorization(bearerToken: "Z3QVm_9UOLc1MaTk2dMIe43Pbx0Es2OfQ15YYMNWCinI2QAAAYWNnWD2")
+    ]
+    AF.request("http://3.39.221.35:8080/register",
                method: .post,
-               parameters: nil,
-               encoding: URLEncoding.default,
-               headers: ["ACCESS_TOKEN":"\(accessToken)"])
-    .validate()
-    .responseDecodable(of: KakaoLogin.self,  completionHandler: { response in
+               parameters: parameter,
+               encoding: JSONEncoding.default,
+//               encoding: URLEncoding.default,
+               headers: header)
+    .responseDecodable(of: KakaoLogin.self) { response in
       switch response.result {
       case .success(let response):
-        AF.request("http://3.39.221.35:8080/register",
-                   method: .post,
-                   parameters: nil,
-                   encoding: URLEncoding.default,
-                   headers: ["ACCESS_TOKEN":"\(response.accessToken)"])
-        .responseJSON { (json) in
-          print("jsonddata \(json)")
-          UserDefaults.standard.set(response.accessToken, forKey: "jwtToken")
-          let vc = LineViewController()
-          (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc, animated: false)
-        }
+        print("웰컴? : \(response.message)")
+        completion("바꾸기")
       default:
-        break
+        print("네트워크에러 : \(response.debugDescription)")
+        completion("바꾸기")
       }
-    })
+    }
+//    .responseJSON { (json) in
+//      print("jsonddata \(json)")
+//      if json.response?.statusCode == 1000 {
+//        // 홈화면을 루트뷰 컨트롤러로?? 토큰 유무 -> 저장되어있으면 바로 홈화면, 아니면 로그인화면
+//      }
+//    }
   }
   
   func configureViews() {
