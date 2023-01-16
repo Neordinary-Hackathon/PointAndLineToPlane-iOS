@@ -20,21 +20,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //    
 //  }
   
-  func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    guard let windowScene = (scene as? UIWindowScene) else { return }
-    window = UIWindow(windowScene: windowScene)
-    if !hasJwtToken() {
-      // 로그인 안된 상태
-      let login = LoginViewController()
-
-      window?.rootViewController = login
-    } else {
-      // 로그인 된 상태
-      let main = LineViewController()
-      window?.rootViewController = main
-
-    window?.rootViewController = login // 전환
-  }
+//  func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+//    guard let windowScene = (scene as? UIWindowScene) else { return }
+//    window = UIWindow(windowScene: windowScene)
+//    if !hasJwtToken() {
+//      // 로그인 안된 상태
+//      let login = LoginViewController()
+//
+//      window?.rootViewController = login
+//    } else {
+//      // 로그인 된 상태
+//      let main = LineViewController()
+//      window?.rootViewController = main
+//
+//    window?.rootViewController = login // 전환
+//  }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -59,8 +59,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window?.makeKeyAndVisible()
 
-    }
-    window?.makeKeyAndVisible()
+//    }
+//    window?.makeKeyAndVisible()
   }
   
   func hasJwtToken() -> Bool {
