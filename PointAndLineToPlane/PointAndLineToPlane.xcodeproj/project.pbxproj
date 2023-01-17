@@ -33,6 +33,9 @@
 		2C6CE65A296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */; };
 		2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE65B296A0DEA00E88E35 /* PlanePopUpViewController.swift */; };
 		2C6CE65E296A202A00E88E35 /* LineListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE65D296A202A00E88E35 /* LineListModel.swift */; };
+		2CDD950E2976C64D004B8D56 /* CommunityDotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD950D2976C64D004B8D56 /* CommunityDotCollectionViewCell.swift */; };
+		2CDD95102976C670004B8D56 /* CommunityLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD950F2976C670004B8D56 /* CommunityLineCollectionViewCell.swift */; };
+		2CDD95122976C685004B8D56 /* CommunityPlaneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDD95112976C685004B8D56 /* CommunityPlaneCollectionViewCell.swift */; };
 		AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */; };
 		AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */; };
 		AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EF2969C64900723C96 /* PopupViewController.swift */; };
@@ -72,6 +75,9 @@
 		2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneWriteSelectedCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C6CE65B296A0DEA00E88E35 /* PlanePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanePopUpViewController.swift; sourceTree = "<group>"; };
 		2C6CE65D296A202A00E88E35 /* LineListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineListModel.swift; sourceTree = "<group>"; };
+		2CDD950D2976C64D004B8D56 /* CommunityDotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDotCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CDD950F2976C670004B8D56 /* CommunityLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		2CDD95112976C685004B8D56 /* CommunityPlaneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPlaneCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailViewController.swift; sourceTree = "<group>"; };
 		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineDetailCell.swift; path = ../../LineDetailCell.swift; sourceTree = "<group>"; };
 		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
@@ -136,11 +142,8 @@
 		07983DA5296935A0007B919C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-
 				AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */,
-
 				2C6CE6552969FBD800E88E35 /* DotRequestModel.swift */,
-
 				AE1CB300296A009000723C96 /* WordListModel.swift */,
 				2C6CE65D296A202A00E88E35 /* LineListModel.swift */,
 			);
@@ -160,6 +163,7 @@
 				AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */,
 				AEFA370C29699A4800D228F6 /* LineCell.swift */,
 				0776493E296994290040DA72 /* SelecteImageCell.swift */,
+				2CDD950A29769E9B004B8D56 /* Community */,
 				2C6CE63F296972F800E88E35 /* Write */,
 			);
 			path = View;
@@ -192,7 +196,6 @@
 				07983D9529693592007B919C /* LoginViewController.swift */,
 				07764932296965A40040DA72 /* MainTabController.swift */,
 				0776493429696D660040DA72 /* WriteController.swift */,
-				0776493629696D810040DA72 /* CommunityController.swift */,
 				0776493829696D920040DA72 /* MyWorkController.swift */,
 				0776493A29696DB70040DA72 /* MyPageController.swift */,
 			);
@@ -266,6 +269,25 @@
 				2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */,
 			);
 			path = Plane;
+			sourceTree = "<group>";
+		};
+		2CDD950A29769E9B004B8D56 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				0776493629696D810040DA72 /* CommunityController.swift */,
+				2CDD950C2976C634004B8D56 /* Cell */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		2CDD950C2976C634004B8D56 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2CDD950D2976C64D004B8D56 /* CommunityDotCollectionViewCell.swift */,
+				2CDD950F2976C670004B8D56 /* CommunityLineCollectionViewCell.swift */,
+				2CDD95112976C685004B8D56 /* CommunityPlaneCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,14 +393,14 @@
 				2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */,
 				07983D9229693592007B919C /* AppDelegate.swift in Sources */,
 				07764933296965A40040DA72 /* MainTabController.swift in Sources */,
+				2CDD95102976C670004B8D56 /* CommunityLineCollectionViewCell.swift in Sources */,
+				2CDD950E2976C64D004B8D56 /* CommunityDotCollectionViewCell.swift in Sources */,
+				2CDD95122976C685004B8D56 /* CommunityPlaneCollectionViewCell.swift in Sources */,
 				0776493529696D660040DA72 /* WriteController.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
-
 				AE1CB303296A2B0A00723C96 /* KakaoLogin.swift in Sources */,
-
 				2C6CE6582969FCFD00E88E35 /* APIToken.swift in Sources */,
 				2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */,
-
 				AE1CB301296A009000723C96 /* WordListModel.swift in Sources */,
 				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
 				AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */,
