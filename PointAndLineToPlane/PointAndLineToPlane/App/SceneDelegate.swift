@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //    self.navigationController.present(mainViewController, animated: true, completion: nil)
 //    
 //  }
-  
+  /*
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     window = UIWindow(windowScene: windowScene)
@@ -53,7 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 
-        window?.rootViewController = MainTabController()
+        window?.rootViewController = MyPageController()
 
 
 
@@ -62,7 +62,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     window?.makeKeyAndVisible()
   }
+   */
   
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowscene = (scene as? UIWindowScene) else { return }
+                window = UIWindow(windowScene: windowscene)
+                window?.backgroundColor = .systemBackground
+                window?.rootViewController = MyPageController()
+                window?.tintColor = .label
+                window?.makeKeyAndVisible()
+    }
   func hasJwtToken() -> Bool {
     return UserDefaults.standard.object(forKey: "jwtToken") != nil
   }
