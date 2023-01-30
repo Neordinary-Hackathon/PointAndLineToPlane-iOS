@@ -33,6 +33,7 @@
 		2C6CE65A296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */; };
 		2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE65B296A0DEA00E88E35 /* PlanePopUpViewController.swift */; };
 		2C6CE65E296A202A00E88E35 /* LineListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CE65D296A202A00E88E35 /* LineListModel.swift */; };
+		AE0E121129881F87009DABC5 /* PlaneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E121029881F87009DABC5 /* PlaneCollectionViewCell.swift */; };
 		AE1CB2E62969BAA900723C96 /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */; };
 		AE1CB2EC2969C29500723C96 /* LineDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */; };
 		AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CB2EF2969C64900723C96 /* PopupViewController.swift */; };
@@ -72,8 +73,9 @@
 		2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneWriteSelectedCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C6CE65B296A0DEA00E88E35 /* PlanePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanePopUpViewController.swift; sourceTree = "<group>"; };
 		2C6CE65D296A202A00E88E35 /* LineListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineListModel.swift; sourceTree = "<group>"; };
+		AE0E121029881F87009DABC5 /* PlaneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailViewController.swift; sourceTree = "<group>"; };
-		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineDetailCell.swift; path = ../../LineDetailCell.swift; sourceTree = "<group>"; };
+		AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailCell.swift; sourceTree = "<group>"; };
 		AE1CB2EF2969C64900723C96 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		AE1CB300296A009000723C96 /* WordListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListModel.swift; sourceTree = "<group>"; };
 		AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLogin.swift; sourceTree = "<group>"; };
@@ -136,11 +138,8 @@
 		07983DA5296935A0007B919C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-
 				AE1CB302296A2B0A00723C96 /* KakaoLogin.swift */,
-
 				2C6CE6552969FBD800E88E35 /* DotRequestModel.swift */,
-
 				AE1CB300296A009000723C96 /* WordListModel.swift */,
 				2C6CE65D296A202A00E88E35 /* LineListModel.swift */,
 			);
@@ -157,8 +156,7 @@
 		07983DA7296935A7007B919C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */,
-				AEFA370C29699A4800D228F6 /* LineCell.swift */,
+				AE0E121029881F87009DABC5 /* PlaneCollectionViewCell.swift */,
 				0776493E296994290040DA72 /* SelecteImageCell.swift */,
 				2C6CE63F296972F800E88E35 /* Write */,
 			);
@@ -186,8 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				AE1CB2EF2969C64900723C96 /* PopupViewController.swift */,
-				AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */,
-				AEFA370A2969935000D228F6 /* LineViewController.swift */,
 				2C6CE63B2969641200E88E35 /* Write */,
 				07983D9529693592007B919C /* LoginViewController.swift */,
 				07764932296965A40040DA72 /* MainTabController.swift */,
@@ -218,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6CE63C2969641900E88E35 /* Point */,
+				AE0E1213298820FC009DABC5 /* Line */,
 				2C6CE64D2969C28100E88E35 /* Plane */,
 			);
 			path = Write;
@@ -236,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6CE640296972FE00E88E35 /* Point */,
+				AE0E1212298820DF009DABC5 /* Line */,
 				2C6CE6502969C7C000E88E35 /* Plane */,
 			);
 			path = Write;
@@ -266,6 +264,24 @@
 				2C6CE659296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift */,
 			);
 			path = Plane;
+			sourceTree = "<group>";
+		};
+		AE0E1212298820DF009DABC5 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				AE1CB2EB2969C29500723C96 /* LineDetailCell.swift */,
+				AEFA370C29699A4800D228F6 /* LineCell.swift */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
+		AE0E1213298820FC009DABC5 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				AE1CB2E52969BAA900723C96 /* LineDetailViewController.swift */,
+				AEFA370A2969935000D228F6 /* LineViewController.swift */,
+			);
+			path = Line;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +382,7 @@
 				2C6CE64829699E3200E88E35 /* PointPopUpViewController.swift in Sources */,
 				2C6CE65A296A0C3700E88E35 /* PlaneWriteSelectedCollectionViewCell.swift in Sources */,
 				2C6CE6522969C7FE00E88E35 /* PlaneWriteCollectionViewCell.swift in Sources */,
+				AE0E121129881F87009DABC5 /* PlaneCollectionViewCell.swift in Sources */,
 				2C6CE6562969FBD800E88E35 /* DotRequestModel.swift in Sources */,
 				2C6CE64F2969C2B900E88E35 /* PlaneListViewController.swift in Sources */,
 				2C6CE6442969748F00E88E35 /* PointWriteCollectionViewCell.swift in Sources */,
@@ -373,12 +390,9 @@
 				07764933296965A40040DA72 /* MainTabController.swift in Sources */,
 				0776493529696D660040DA72 /* WriteController.swift in Sources */,
 				07983D9429693592007B919C /* SceneDelegate.swift in Sources */,
-
 				AE1CB303296A2B0A00723C96 /* KakaoLogin.swift in Sources */,
-
 				2C6CE6582969FCFD00E88E35 /* APIToken.swift in Sources */,
 				2C6CE65C296A0DEA00E88E35 /* PlanePopUpViewController.swift in Sources */,
-
 				AE1CB301296A009000723C96 /* WordListModel.swift in Sources */,
 				AE1CB2F02969C64900723C96 /* PopupViewController.swift in Sources */,
 				AEFA370D29699A4800D228F6 /* LineCell.swift in Sources */,
